@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitR.Dapper", "ArbitR.Dapper\ArbitR.Dapper.csproj", "{6847C762-A1A0-4918-A0D2-8214FE70B70E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitR.Core", "ArbitR.Core\ArbitR.Core.csproj", "{B4899961-0E85-43AA-9B2F-1D7CC451721B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitR", "ArbitR\ArbitR.csproj", "{976773B0-C403-40D7-8E1E-293D181EC33B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6847C762-A1A0-4918-A0D2-8214FE70B70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6847C762-A1A0-4918-A0D2-8214FE70B70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6847C762-A1A0-4918-A0D2-8214FE70B70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6847C762-A1A0-4918-A0D2-8214FE70B70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4899961-0E85-43AA-9B2F-1D7CC451721B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4899961-0E85-43AA-9B2F-1D7CC451721B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4899961-0E85-43AA-9B2F-1D7CC451721B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4899961-0E85-43AA-9B2F-1D7CC451721B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{976773B0-C403-40D7-8E1E-293D181EC33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{976773B0-C403-40D7-8E1E-293D181EC33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{976773B0-C403-40D7-8E1E-293D181EC33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{976773B0-C403-40D7-8E1E-293D181EC33B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
