@@ -54,6 +54,24 @@
             </e>
           </e>
         </e>
+        <e p="Pipeline" t="Include">
+          <e p="Consume" t="Include">
+            <e p="IConsume.cs" t="Include" />
+          </e>
+          <e p="IPipeline.cs" t="Include" />
+          <e p="Perform" t="Include">
+            <e p="IPerform.cs" t="Include" />
+          </e>
+          <e p="PipelineDefinition.cs" t="Include" />
+          <e p="PipelineStep.cs" t="Include" />
+          <e p="PipelineStepHandle.cs" t="Include" />
+          <e p="Produce" t="Include">
+            <e p="IProduce.cs" t="Include" />
+          </e>
+          <e p="Transform" t="Include">
+            <e p="ITransform.cs" t="Include" />
+          </e>
+        </e>
         <e p="Query" t="Include">
           <e p="IQuery.cs" t="Include" />
         </e>
@@ -93,6 +111,18 @@
         </e>
       </e>
       <e p="ArbitR.sln" t="IncludeFlat" />
+      <e p="ArbitR.Tester" t="IncludeRecursive">
+        <e p="ArbitR.Tester.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="ArbitR.Tester.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
     <e p="C:\Users\Rhexis\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />

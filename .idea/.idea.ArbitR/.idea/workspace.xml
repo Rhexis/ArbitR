@@ -8,52 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb660050-83e5-45d6-ba65-f560689b1797" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/ArbitR.Core.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Command/ICommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Config.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Event/AuditEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Event/IEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Extensions/TypeExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/Query/IQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/ArbitR.Dapper.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Database/DbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Database/DefaultDbConnectionFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Database/IDbConnectionFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Handlers/IHandleCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Handlers/IHandleEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Handlers/IHandleQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Handlers/IMightHandleEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Pipeline/Arbiter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Pipeline/IArbiter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Registry.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Services/IService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Services/ReadService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Services/ServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.Dapper/Services/WriteService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Handlers/IHandleCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Handlers/IHandleEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Handlers/IHandleQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Handlers/IMightHandleEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Registry.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Services/IReadService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Services/IService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Services/IWriteService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Services/ReadService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ArbitR/Services/WriteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,21 +25,25 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ArbitR.Dapper/Services/ServiceBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/37/String.Comparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/14/IPublisher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/32/0172a681/NotNullAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C154223E-E801-4436-BC7F-D1257AACDBAA/0/IDbConnection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/1C/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/30/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/37/String.Comparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/8e/097ff10a/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/3B/Type.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FAF91EAF-0C6A-4596-962E-C1044229D107/2/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/14/IPublisher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/32/0172a681/NotNullAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/4b/8073abe7/IList`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/91/08e044ff/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/2B3/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/3/Mediator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/31/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/41A/List.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/ArbitR.Tester/ServiceFactory.cs" />
-      <option value="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Dapper/Database/LockingCache.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Dapper/Database/Db.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Dapper/Database/DbContext.cs" />
@@ -88,10 +52,8 @@
       <option value="$PROJECT_DIR$/ArbitR/Handlers/IHandleQuery.cs" />
       <option value="$PROJECT_DIR$/ArbitR/Services/IReadService.cs" />
       <option value="$PROJECT_DIR$/ArbitR/Services/ReadService.cs" />
-      <option value="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Dapper/Pipeline/Arbiter.cs" />
-      <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Command/ICommand.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Event/IEvent.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Query/IQuery.cs" />
@@ -101,10 +63,32 @@
       <option value="$PROJECT_DIR$/ArbitR.Dapper/Registry.cs" />
       <option value="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.csproj" />
       <option value="$PROJECT_DIR$/ConsoleApp1/Program.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Aggregates/Saga.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/ITransform.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IProduce.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IConsume.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Interface.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepArgument.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepHandle.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IPipeline.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStep.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineManager.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Tester/Program.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Consume/IConsume.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Produce/IProduce.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Transform/ITransform.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Perform/IPerform.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1jzlCXmawVsObIbZ9jVsLz3rhpz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -126,7 +110,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.ConsoleApp1">
+  <component name="RunManager" selected=".NET Project.ArbitR.Tester">
     <configuration name="ArbitR.Benchmark" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -200,7 +184,11 @@
       <workItem from="1605186686680" duration="3077000" />
       <workItem from="1605839510164" duration="11267000" />
       <workItem from="1606541970833" duration="10048000" />
-      <workItem from="1606700266209" duration="10819000" />
+      <workItem from="1606700266209" duration="12029000" />
+      <workItem from="1613038762066" duration="930000" />
+      <workItem from="1613455516927" duration="1971000" />
+      <workItem from="1613532495219" duration="1268000" />
+      <workItem from="1613538422247" duration="19341000" />
     </task>
     <servers />
   </component>
@@ -223,5 +211,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ArbitR.Tester/Program.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Dev\ArbitR\ArbitR.Tester\Program.cs" initialLine="15" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="903" />
+            </startOffsets>
+            <endOffsets>
+              <option value="913" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ArbitR.Tester/Program.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Dev\ArbitR\ArbitR.Tester\Program.cs" initialLine="20" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="668" />
+            </startOffsets>
+            <endOffsets>
+              <option value="713" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

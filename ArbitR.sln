@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitR.Core", "ArbitR.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitR", "ArbitR\ArbitR.csproj", "{976773B0-C403-40D7-8E1E-293D181EC33B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArbitR.Tester", "ArbitR.Tester\ArbitR.Tester.csproj", "{FD533F4F-A86A-4043-AE93-099936B69DDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{976773B0-C403-40D7-8E1E-293D181EC33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976773B0-C403-40D7-8E1E-293D181EC33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976773B0-C403-40D7-8E1E-293D181EC33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD533F4F-A86A-4043-AE93-099936B69DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD533F4F-A86A-4043-AE93-099936B69DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD533F4F-A86A-4043-AE93-099936B69DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD533F4F-A86A-4043-AE93-099936B69DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
