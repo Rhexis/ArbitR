@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -42,21 +43,19 @@ namespace ArbitR.Pipeline
 
         public void Execute(IPipeline pipeline)
         {
-            var onFirstStep = true;
             object? previousStepResult = null;
             foreach (PipelineStep step in pipeline.Steps)
             {
                 object? service = ServiceFactory.GetInstance(step.Handle.Service);
                 object?[] args;
                 
-                if (onFirstStep)
+                if (previousStepResult is null)
                 {
-                    onFirstStep = false;
                     args = step.Args.ToArray().Box<object[]>();
                 }
                 else
                 {
-                    args = step.Args.ToList().Prepend(previousStepResult).ToArray();
+                    args = step.Args.Prepend(previousStepResult).ToArray();
                 }
                 
                 previousStepResult = step.Handle.Service.InvokeMember

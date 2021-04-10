@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using ArbitR.Core.Extensions;
 using ArbitR.Core.Pipeline.Consume;
 using ArbitR.Core.Pipeline.Perform;
 using ArbitR.Core.Pipeline.Transform;
@@ -9,12 +12,6 @@ namespace ArbitR.Core.Pipeline
     public class PipelineDefinition : IPipeline
     {
         private readonly List<PipelineStep> _steps = new();
-        protected enum Method
-        {
-            Transform,
-            Consume,
-            Produce
-        }
         public IEnumerable<PipelineStep> Steps => _steps;
 
         protected Operation<T> For<T>() where T : IPerform
@@ -30,24 +27,37 @@ namespace ArbitR.Core.Pipeline
             {
                 _definition = definition;
             }
+
+            public void AddStep(Expression<Action<T>> method)
+            {
+                var methodCallExpr = (MethodCallExpression) method.Body;
+                List<object?> args = methodCallExpr.Arguments
+                    .Select(x => x.GetArgumentValue()).ToList();
+                if (args.First() == null)
+                {
+                    args.RemoveAt(0);
+                }
+
+                AddStep(methodCallExpr.Method.Name, args);
+            }
             
-            public void AddStep(Method method)
+            public void AddStep(string method)
             {
                 AddStep(method, Array.Empty<object?>());
             }
 
-            public void AddStep(Method method, IEnumerable<object?> args)
+            public void AddStep(string method, IEnumerable<object?> args)
             {
                 _definition._steps.Add(new PipelineStep
                 (
-                    new PipelineStepHandle(typeof(T), method.ToString()),
+                    new PipelineStepHandle(typeof(T), method),
                     args
                 ));
             }
         }
     }
-
-    // Really Dumbed down example...
+    
+    // Example
     public class TestPipelineDefinition : PipelineDefinition
     {
         public TestPipelineDefinition()
@@ -55,8 +65,15 @@ namespace ArbitR.Core.Pipeline
             // The first argument of each step is the result of the previous step
             // only if the previous step returns a value, this occurs magically.
             // Steps are executed in the order in which they are added.
-            For<TransformOperationProvider>().AddStep(Method.Transform, new []{"Tyler", "Clement"});
-            For<ConsumeOperationProvider>().AddStep(Method.Consume);
+            For<TransformOperationProvider>().AddStep(x => x.Transform("Tyler", "Clement"));
+            For<ConsumeOperationProvider>().AddStep(x => x.Consume(null!, true));
+            //For<TransformOperationProvider>().AddStep("Transform", new []{"Tyler", "Clement"});
+            //For<ConsumeOperationProvider>().AddStep("Consume", new object?[] {true});
+
+            // Equivalent code.
+            var consumer = new ConsumeOperationProvider();
+            var transformer = new TransformOperationProvider();
+            consumer.Consume(transformer.Transform("Tyler", "Clement"), true);
         }
     }
     
@@ -70,9 +87,9 @@ namespace ArbitR.Core.Pipeline
     }
 
     public class ConsumeOperationProvider :
-        IConsume<string>
+        IConsume<string, bool>
     {
-        public void Consume(string data)
+        public void Consume(string data, bool useless)
         {
             Console.WriteLine(data);
         }

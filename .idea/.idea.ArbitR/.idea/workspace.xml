@@ -8,12 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb660050-83e5-45d6-ba65-f560689b1797" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,22 +26,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ArbitR.Dapper/Services/ServiceBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/3A/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/3E/String.Comparison.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/37/String.Comparison.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/14/IPublisher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/32/0172a681/NotNullAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C154223E-E801-4436-BC7F-D1257AACDBAA/0/IDbConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/1C/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/30/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/43/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/3B/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/8e/097ff10a/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/3B/Type.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FAF91EAF-0C6A-4596-962E-C1044229D107/2/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/14/IPublisher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C154223E-E801-4436-BC7F-D1257AACDBAA/0/IDbConnection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/4b/8073abe7/IList`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/91/08e044ff/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/2B3/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/3/Mediator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/31/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/30/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/41A/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/3B/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/91/08e044ff/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/1C/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FAF91EAF-0C6A-4596-962E-C1044229D107/2/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/2B3/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/32/0172a681/NotNullAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3834795B-F41B-4E62-8161-509ECA0F5822/3/Mediator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ArbitR.Dapper/Services/ServiceBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/31/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -75,14 +81,16 @@
       <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IPipeline.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStep.cs" />
-      <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineManager.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Tester/Program.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Consume/IConsume.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Produce/IProduce.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Transform/ITransform.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Perform/IPerform.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ExpressionExtensions.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
+      <option value="$APPLICATION_CONFIG_DIR$/scratches/test.txt" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1jzlCXmawVsObIbZ9jVsLz3rhpz" />
@@ -188,7 +196,8 @@
       <workItem from="1613038762066" duration="930000" />
       <workItem from="1613455516927" duration="1971000" />
       <workItem from="1613532495219" duration="1268000" />
-      <workItem from="1613538422247" duration="19341000" />
+      <workItem from="1613538422247" duration="33507000" />
+      <workItem from="1615995178921" duration="615000" />
     </task>
     <servers />
   </component>
@@ -240,6 +249,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ArbitR.Tester/Program.cs</url>
+          <line>11</line>
+          <properties documentPath="C:\Dev\ArbitR\ArbitR.Tester\Program.cs" initialLine="11" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="250" />
+            </startOffsets>
+            <endOffsets>
+              <option value="284" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Dev\ArbitR\ArbitR\Pipeline\Arbiter.cs" initialLine="47" containingFunctionPresentation="method 'Execute'">
+            <startOffsets>
+              <option value="1495" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1561" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
