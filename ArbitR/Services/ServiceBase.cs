@@ -7,9 +7,7 @@ namespace ArbitR.Services
 {
     public class ServiceBase : IService
     {
-        internal ServiceBase()
-        {
-        }
+        internal ServiceBase() {}
         
         private bool CanHandle(IEvent eEvent)
         {

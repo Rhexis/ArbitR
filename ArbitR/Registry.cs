@@ -16,7 +16,7 @@ namespace ArbitR
         /// <param name="assemblies">The Assemblies that contains the read and write model managers.</param>
         public static void AddArbitR(this IServiceCollection services, params Assembly[] assemblies)
         {
-            services.AddScoped<IArbiter, Arbiter>();
+            services.AddTransient<IArbiter, Arbiter>();
             ServiceFactory.Initialize
             (
                 services,

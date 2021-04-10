@@ -7,7 +7,6 @@ using ArbitR.Core.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 [assembly: InternalsVisibleTo("ArbitR")]
-[assembly: InternalsVisibleTo("ArbitR.Dapper")]
 namespace ArbitR.Core
 {
     internal static class ServiceFactory
