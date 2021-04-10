@@ -8,14 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb660050-83e5-45d6-ba65-f560689b1797" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/Consume/IConsume.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/IPipeline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/Perform/IPerform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStep.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepHandle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/Produce/IProduce.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Pipeline/Transform/ITransform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Tester/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +81,6 @@
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IConsume.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Interface.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepArgument.cs" />
-      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepHandle.cs" />
-      <option value="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IPipeline.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStep.cs" />
@@ -89,8 +92,10 @@
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Perform/IPerform.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ExpressionExtensions.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineDefinition.cs" />
-      <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/scratches/test.txt" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepHandle.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1jzlCXmawVsObIbZ9jVsLz3rhpz" />
@@ -198,6 +203,7 @@
       <workItem from="1613532495219" duration="1268000" />
       <workItem from="1613538422247" duration="33507000" />
       <workItem from="1615995178921" duration="615000" />
+      <workItem from="1618035447247" duration="233000" />
     </task>
     <servers />
   </component>
@@ -220,63 +226,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ArbitR.Tester/Program.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Dev\ArbitR\ArbitR.Tester\Program.cs" initialLine="15" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="903" />
-            </startOffsets>
-            <endOffsets>
-              <option value="913" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ArbitR.Tester/Program.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Dev\ArbitR\ArbitR.Tester\Program.cs" initialLine="20" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="668" />
-            </startOffsets>
-            <endOffsets>
-              <option value="713" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ArbitR.Tester/Program.cs</url>
-          <line>11</line>
-          <properties documentPath="C:\Dev\ArbitR\ArbitR.Tester\Program.cs" initialLine="11" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="250" />
-            </startOffsets>
-            <endOffsets>
-              <option value="284" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs</url>
-          <line>48</line>
-          <properties documentPath="C:\Dev\ArbitR\ArbitR\Pipeline\Arbiter.cs" initialLine="47" containingFunctionPresentation="method 'Execute'">
-            <startOffsets>
-              <option value="1495" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1561" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
