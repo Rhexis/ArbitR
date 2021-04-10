@@ -6,12 +6,14 @@
     <projectFile>ArbitR.Benchmark/ArbitR.Benchmark.csproj</projectFile>
     <projectFile>ConsoleApp1/ConsoleApp1.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cb660050-83e5-45d6-ba65-f560689b1797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Registry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Registry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F3DD31A3-D437-4D7D-9525-D887480DAE95/3A/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,6 +97,8 @@
       <option value="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" />
       <option value="$PROJECT_DIR$/ArbitR/Registry.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/ArbitR.csproj" />
+      <option value="$PROJECT_DIR$/README.md" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1jzlCXmawVsObIbZ9jVsLz3rhpz" />
@@ -102,7 +114,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ArbitR.Lite/ArbitR.Lite.csproj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/README.md" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,6 +123,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -195,7 +208,7 @@
       <workItem from="1613538422247" duration="33507000" />
       <workItem from="1615995178921" duration="615000" />
       <workItem from="1618035447247" duration="400000" />
-      <workItem from="1618036216598" duration="490000" />
+      <workItem from="1618036216598" duration="1769000" />
     </task>
     <servers />
   </component>
