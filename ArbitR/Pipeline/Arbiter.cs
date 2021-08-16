@@ -11,17 +11,24 @@ namespace ArbitR.Pipeline
 {
     internal sealed class Arbiter : IArbiter
     {
-        public void Invoke(ICommand command)
+        private readonly ServiceFactory _serviceFactory;
+
+        public Arbiter(ServiceFactory serviceFactory)
         {
-            var handler = ServiceFactory
-                .GetInstance(typeof(IHandleCommand<>).MakeGenericType(command.GetType()))
+            _serviceFactory = serviceFactory;
+        }
+
+        public void Invoke(ICommand cmd)
+        {
+            var handler = _serviceFactory
+                .GetInstance(typeof(IHandleCommand<>).MakeGenericType(cmd.GetType()))
                 .Unbox<WriteService>();
-            handler.Handle(command);
+            handler.Handle(cmd);
         }
         
         public T Invoke<T>(IQuery<T> query)
         {
-            var handler = ServiceFactory
+            var handler = _serviceFactory
                 .GetInstance(typeof(IHandleQuery<,>).MakeGenericType(query.GetType(), typeof(T)))
                 .Unbox<ReadService>();
             return handler.Handle(query).Unbox<T>();
@@ -29,11 +36,11 @@ namespace ArbitR.Pipeline
         
         public void Raise(IEvent eEvent)
         {
-            IEnumerable<object> handlers = ServiceFactory
+            IEnumerable<object> handlers = _serviceFactory
                 .GetInstances(typeof(IHandleEvent<>).MakeGenericType(eEvent.GetType()));
             foreach (var handler in handlers)
             {
-                handler.Unbox<ServiceBase>().Handle(eEvent);
+                handler.Unbox<ReadModelManager>().Handle(eEvent);
             }
         }
     }

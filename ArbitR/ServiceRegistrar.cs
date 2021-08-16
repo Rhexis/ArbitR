@@ -1,13 +1,12 @@
 ﻿using System.Linq;
 using System.Reflection;
-using ArbitR.Core;
 using ArbitR.Handlers;
 using ArbitR.Pipeline;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ArbitR
 {
-    public static class Registry
+    public static class ServiceRegistrar
     {
         /// <summary>
         /// Sets up and configures ArbitR.
@@ -17,7 +16,7 @@ namespace ArbitR
         public static void AddArbitR(this IServiceCollection services, params Assembly[] assemblies)
         {
             services.AddTransient<IArbiter, Arbiter>();
-            ServiceFactory.Initialize
+            Core.ServiceRegistrar.Register
             (
                 services,
                 assemblies.Distinct().ToArray(),

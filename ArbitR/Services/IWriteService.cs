@@ -4,6 +4,6 @@ namespace ArbitR.Services
 {
     internal interface IWriteService
     {
-        void Handle(ICommand command);
+        void Handle(ICommand cmd);
     }
 }
