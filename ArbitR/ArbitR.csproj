@@ -4,6 +4,10 @@
         <TargetFramework>net5.0</TargetFramework>
         <Nullable>enable</Nullable>
         <LangVersion>9</LangVersion>
+        <Authors>Tyler Clement</Authors>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseUrl>https://licenses.nuget.org/Apache-2.0</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/Rhexis/ArbitR</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
