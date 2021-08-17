@@ -12,18 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb660050-83e5-45d6-ba65-f560689b1797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/ArbitR.Core.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Command/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Core/Command/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Event/IEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Core/Event/IEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Core/Extensions/ObjectExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/TypeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Core/Extensions/TypeExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Query/IQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Core/Query/IQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/ServiceFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/ServiceRegistrar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/ServiceRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/ServiceRegistrar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +152,7 @@
       <workItem from="1618035447247" duration="400000" />
       <workItem from="1618036216598" duration="5351000" />
       <workItem from="1629082215894" duration="52000" />
-      <workItem from="1629082319039" duration="22549000" />
+      <workItem from="1629082319039" duration="23332000" />
     </task>
     <servers />
   </component>
