@@ -4,7 +4,7 @@ A simple light weight CQRS implementation built in .NET
 Has support for Commands, Queries and event notifications.
 
 ## Configuration
-Within a C# .NET 5 Web Applications Startup.cs
+Within a C# .NET 5 Web Applications Startup.cs or the project that contains the write/read services & read model managers.
 ```c#
 public void ConfigureServices(IServiceCollection services)
 {
