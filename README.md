@@ -1,7 +1,9 @@
 # ArbitR
 A simple light weight CQRS implementation built in .NET
 
-Has support for Commands, Queries and event notifications.
+Has support for Commands, Queries and Event notifications.
+
+ArbitR is built on top of the .NET Service Collection, after configuration inject an `IArbiter` where you need it and you are good to go!
 
 ## Configuration
 Within a C# .NET 5 Web Applications Startup.cs or the project that contains the write/read services & read model managers.
