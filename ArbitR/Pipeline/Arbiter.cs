@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using ArbitR.Core;
 using ArbitR.Core.Command;
 using ArbitR.Core.Event;
@@ -21,7 +22,8 @@ namespace ArbitR.Pipeline
         public void Invoke(ICommand cmd)
         {
             var handler = _serviceFactory
-                .GetInstance(typeof(IHandleCommand<>).MakeGenericType(cmd.GetType()))
+                .GetInstances(typeof(IHandleCommand<>).MakeGenericType(cmd.GetType()))
+                .Single()
                 .Unbox<WriteService>();
             handler.Handle(cmd);
         }
@@ -29,7 +31,8 @@ namespace ArbitR.Pipeline
         public T Invoke<T>(IQuery<T> query)
         {
             var handler = _serviceFactory
-                .GetInstance(typeof(IHandleQuery<,>).MakeGenericType(query.GetType(), typeof(T)))
+                .GetInstances(typeof(IHandleQuery<,>).MakeGenericType(query.GetType(), typeof(T)))
+                .Single()
                 .Unbox<ReadService>();
             return handler.Handle(query).Unbox<T>();
         }
