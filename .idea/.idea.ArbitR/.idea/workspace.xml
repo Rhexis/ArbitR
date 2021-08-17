@@ -12,19 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cb660050-83e5-45d6-ba65-f560689b1797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArbitR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Config.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Event/AuditEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/ExpressionExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR.Core/Extensions/TypeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/Extensions/TypeExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/ArbitR.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Handlers/IHandleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Handlers/IHandleCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Registry.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Services/IService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Services/IWriteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Services/IWriteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Services/ReadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Services/ReadService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArbitR/Services/WriteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/Services/WriteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbitR/ServiceRegistrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ArbitR/ServiceRegistrar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +82,6 @@
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IConsume.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/Interface.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStepArgument.cs" />
-      <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/IPipeline.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineStep.cs" />
       <option value="$PROJECT_DIR$/ArbitR.Core/Pipeline/PipelineManager.cs" />
@@ -106,10 +97,14 @@
       <option value="$PROJECT_DIR$/ArbitR/Pipeline/IArbiter.cs" />
       <option value="$PROJECT_DIR$/ArbitR/Pipeline/Arbiter.cs" />
       <option value="$PROJECT_DIR$/ArbitR/Services/ServiceBase.cs" />
-      <option value="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" />
       <option value="$PROJECT_DIR$/ArbitR/Registry.cs" />
       <option value="$PROJECT_DIR$/ArbitR/ArbitR.csproj" />
       <option value="$PROJECT_DIR$/README.md" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/TypeExtensions.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/ServiceFactory.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/Services/ReadModelManager.cs" />
+      <option value="$PROJECT_DIR$/ArbitR/ServiceRegistrar.cs" />
+      <option value="$PROJECT_DIR$/ArbitR.Core/Extensions/ObjectExtensions.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1jzlCXmawVsObIbZ9jVsLz3rhpz" />
@@ -160,7 +155,7 @@
       <workItem from="1618035447247" duration="400000" />
       <workItem from="1618036216598" duration="5351000" />
       <workItem from="1629082215894" duration="52000" />
-      <workItem from="1629082319039" duration="39000" />
+      <workItem from="1629082319039" duration="10573000" />
     </task>
     <servers />
   </component>

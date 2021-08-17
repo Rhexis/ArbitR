@@ -25,7 +25,6 @@ namespace ArbitR.Core.Extensions
         
         public static bool CanBeCastTo(this Type fromType, Type toType)
         {
-            if (fromType == null) return false;
             return fromType == toType || toType.GetTypeInfo().IsAssignableFrom(fromType.GetTypeInfo());
         }
 
@@ -36,7 +35,7 @@ namespace ArbitR.Core.Extensions
 
         public static IEnumerable<Type> FindInterfaces(this Type fromType, Type templateType)
         {
-            if (fromType == null || !fromType.IsConcrete() || !templateType.GetTypeInfo().IsInterface)
+            if (!fromType.IsConcrete() || !templateType.GetTypeInfo().IsInterface)
             {
                 return Enumerable.Empty<Type>();
             }

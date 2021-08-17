@@ -1,15 +1,15 @@
 namespace ArbitR.Core.Extensions
 {
-    public static class ObjectExtensions
+    internal static class ObjectExtensions
     {
         public static T Unbox<T>(this object? o)
         {
             return (T)o!;
         }
 
-        public static T Box<T>(this object o)
+        public static object? Box<T>(this T o)
         {
-            return (T) o;
+            return o;
         }
     }
 }

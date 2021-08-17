@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ArbitR.Core.Extensions;
 
 namespace ArbitR.Core
 {
@@ -7,13 +8,13 @@ namespace ArbitR.Core
     internal static class ServiceFactoryExtensions
     {
         public static T GetInstance<T>(this ServiceFactory factory)
-            => (T) factory(typeof(T));
+            => factory(typeof(T)).Unbox<T>();
 
         public static IEnumerable<T> GetInstances<T>(this ServiceFactory factory)
-            => (IEnumerable<T>) factory(typeof(IEnumerable<T>));
+            => factory(typeof(IEnumerable<T>)).Unbox<IEnumerable<T>>();
         
         public static object? GetInstance(this ServiceFactory factory, Type type) 
-            => (object?) factory(type);
+            => factory(type).Box();
         
         public static IEnumerable<object> GetInstances(this ServiceFactory factory, Type type)
             => (IEnumerable<object>) factory(typeof(IEnumerable<>).MakeGenericType(type));

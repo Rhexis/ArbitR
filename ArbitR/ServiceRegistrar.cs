@@ -12,7 +12,7 @@ namespace ArbitR
         /// Sets up and configures ArbitR.
         /// </summary>
         /// <param name="services">Service collection container.</param>
-        /// <param name="assemblies">The Assemblies that contains the read and write model managers.</param>
+        /// <param name="assemblies">The Assemblies that contains the read/write services & read model managers.</param>
         public static void AddArbitR(this IServiceCollection services, params Assembly[] assemblies)
         {
             services.AddTransient<IArbiter, Arbiter>();
