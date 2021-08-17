@@ -1,9 +1,9 @@
-#ArbitR
+# ArbitR
 A simple light weight CQRS implementation built in .NET
 
 Has support for Commands, Queries and event notifications.
 
-##Configuration
+## Configuration
 Within a C# .NET 5 Web Applications Startup.cs
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -14,7 +14,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-##Usage
+## Usage
 There are 3 types of services available in ArbitR.
 1. WriteService
 2. ReadService
@@ -24,10 +24,10 @@ This architecture is based off my interpretation of the Microsoft docs found her
 
 https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
 
-###WriteService
+### WriteService
 Used for managing a single tables Create/Remove/Update actions. This is done through the invocation of commands. When making a command inherit `ICommand`.
 
-######Sample
+###### Sample
 ```c#
 public class ExampleWriteService : WriteService,
     IHandleCommand<ExampleCommand>
@@ -41,10 +41,10 @@ public class ExampleWriteService : WriteService,
 }
 ```
 
-###ReadService
+### ReadService
 Used for managing a single tables Display actions. This is done through the invocation of queries. When making a query inherit `IQuery`.
 
-######Sample
+###### Sample
 ```c#
 public class ExampleReadService : ReadService,
     IHandleQuery<ExampleQuery, ExampleModel>
@@ -58,10 +58,10 @@ public class ExampleReadService : ReadService,
 }
 ```
 
-###ReadModelManager
+### ReadModelManager
 Used for managing read-only views built from one or more tables. This is done through the raising of events. When making an event, inherit `IEvent`.
 
-######Sample
+###### Sample
 ```c#
 public class LoginAttemptReadModelManager : ReadModelManager,
     IHandleEvent<LoginSuccessEvent>,
