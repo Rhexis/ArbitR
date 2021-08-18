@@ -1,6 +1,6 @@
-using ArbitR.Core.Query;
+using ArbitR.Pipeline.Read;
 
-namespace ArbitR.Services
+namespace ArbitR.Internal.Pipeline.Service
 {
     internal interface IReadService
     {

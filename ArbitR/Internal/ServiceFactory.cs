@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using ArbitR.Core.Extensions;
+using ArbitR.Internal.Extensions;
 
-namespace ArbitR.Core
+namespace ArbitR.Internal
 {
     internal delegate object ServiceFactory(Type serviceType);
     internal static class ServiceFactoryExtensions

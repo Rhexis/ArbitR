@@ -1,6 +1,4 @@
-using ArbitR.Core.Event;
-
-namespace ArbitR.Handlers
+namespace ArbitR.Pipeline.ReadModel
 {
     public interface IMightHandleEvent<in TEvent> : IHandleEvent<TEvent> where TEvent : IEvent
     {

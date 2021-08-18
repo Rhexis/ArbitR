@@ -1,7 +1,6 @@
-using ArbitR.Core.Query;
-using ArbitR.Handlers;
+using ArbitR.Internal.Pipeline.Service;
 
-namespace ArbitR.Services   
+namespace ArbitR.Pipeline.Read   
 {
     /// <summary>
     /// Used for managing a single tables Display actions.

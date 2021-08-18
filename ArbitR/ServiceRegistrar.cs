@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ArbitR.Core;
-using ArbitR.Core.Extensions;
-using ArbitR.Handlers;
+using ArbitR.Internal;
+using ArbitR.Internal.Extensions;
+using ArbitR.Internal.Pipeline;
 using ArbitR.Pipeline;
+using ArbitR.Pipeline.Read;
+using ArbitR.Pipeline.ReadModel;
+using ArbitR.Pipeline.Write;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ArbitR

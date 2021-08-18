@@ -1,4 +1,4 @@
-namespace ArbitR.Core.Event
+namespace ArbitR.Pipeline.ReadModel
 {
     public interface IEvent
     {

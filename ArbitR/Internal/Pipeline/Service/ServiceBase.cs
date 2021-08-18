@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace ArbitR.Services
+namespace ArbitR.Internal.Pipeline.Service
 {
     public abstract class ServiceBase
     {

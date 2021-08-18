@@ -1,6 +1,6 @@
-using ArbitR.Core.Command;
+using ArbitR.Pipeline.Write;
 
-namespace ArbitR.Services
+namespace ArbitR.Internal.Pipeline.Service
 {
     internal interface IWriteService
     {

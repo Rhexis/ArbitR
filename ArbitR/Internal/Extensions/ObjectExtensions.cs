@@ -1,4 +1,4 @@
-namespace ArbitR.Core.Extensions
+namespace ArbitR.Internal.Extensions
 {
     internal static class ObjectExtensions
     {

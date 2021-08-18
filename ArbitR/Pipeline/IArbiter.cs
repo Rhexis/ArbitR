@@ -1,6 +1,6 @@
-using ArbitR.Core.Command;
-using ArbitR.Core.Event;
-using ArbitR.Core.Query;
+using ArbitR.Pipeline.Read;
+using ArbitR.Pipeline.ReadModel;
+using ArbitR.Pipeline.Write;
 
 namespace ArbitR.Pipeline
 {

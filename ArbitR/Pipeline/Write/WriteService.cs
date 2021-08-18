@@ -1,7 +1,6 @@
-using ArbitR.Core.Command;
-using ArbitR.Handlers;
+using ArbitR.Internal.Pipeline.Service;
 
-namespace ArbitR.Services
+namespace ArbitR.Pipeline.Write
 {
     /// <summary>
     /// Used for managing a single tables Create/Remove/Update actions.

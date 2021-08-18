@@ -1,6 +1,4 @@
-using ArbitR.Core.Query;
-
-namespace ArbitR.Handlers
+namespace ArbitR.Pipeline.Read
 {
     public interface IHandleQuery<in TQuery, out TResult> where TQuery : IQuery
     {

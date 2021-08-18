@@ -1,8 +1,7 @@
-using ArbitR.Core.Event;
-using ArbitR.Core.Extensions;
-using ArbitR.Handlers;
+using ArbitR.Internal.Extensions;
+using ArbitR.Pipeline.Read;
 
-namespace ArbitR.Services
+namespace ArbitR.Pipeline.ReadModel
 {
     /// <summary>
     /// Used for managing read-only views built from one or more tables.

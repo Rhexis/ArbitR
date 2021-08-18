@@ -1,4 +1,4 @@
-namespace ArbitR.Core.Query
+namespace ArbitR.Pipeline.Read
 {
     public interface IQuery
     {

@@ -1,6 +1,4 @@
-using ArbitR.Core.Command;
-
-namespace ArbitR.Handlers
+namespace ArbitR.Pipeline.Write
 {
     public interface IHandleCommand<in TCommand> where TCommand : ICommand
     {

@@ -1,4 +1,4 @@
-namespace ArbitR.Core.Command
+namespace ArbitR.Pipeline.Write
 {
     public interface ICommand
     {
