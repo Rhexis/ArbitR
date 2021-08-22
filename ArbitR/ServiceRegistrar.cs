@@ -8,6 +8,7 @@ using ArbitR.Internal.Pipeline;
 using ArbitR.Pipeline;
 using ArbitR.Pipeline.Read;
 using ArbitR.Pipeline.ReadModel;
+using ArbitR.Pipeline.Workflows;
 using ArbitR.Pipeline.Write;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -32,6 +33,7 @@ namespace ArbitR
                     typeof(IHandleCommand<>),
                     typeof(IHandleEvent<>),
                     typeof(IHandleQuery<,>),
+                    typeof(IWorkflow<,>)
                 }
             );
         }

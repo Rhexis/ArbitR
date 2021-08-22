@@ -9,5 +9,7 @@ namespace ArbitR.Pipeline
         void Invoke(ICommand cmd);
         T Invoke<T>(IQuery<T> query);
         void Raise(IEvent eEvent);
+
+        T Begin<T>(ICommand cmd);
     }
 }
