@@ -17,43 +17,51 @@ namespace ArbitR.Tester
 
             var arbiter = scope.ServiceProvider.GetService<IArbiter>()!;
 
-            var cmd = new TestCommand
-            {
-                Id = 0,
-                Name = "Hello World!"
-            };
+            var workflow = new TestWorkflow(1, "Hello World");
             
-            arbiter.Begin<TestResult>(cmd);
+            TestResult result = arbiter.Begin(workflow);
 
             var a = 5;
         }
     }
 
     public class TestWriteService : WriteService,
-        IHandleCommand<TestCommand>,
-        IHandleCommand<Test2Command>
+        IHandleCommand<Step1Command>,
+        IHandleCommand<Step2Command>
     {
-        public void Handle(TestCommand cmd)
+        public void Handle(Step1Command cmd)
         {
             var a = 5;
         }
 
-        public void Handle(Test2Command cmd)
+        public void Handle(Step2Command cmd)
         {
             var a = 5;
         }
     }
 
     public class TestReadModelManager : ReadModelManager,
-        IHandleEvent<TestSuccessEvent>,
-        IHandleEvent<TestFailEvent>
+        IHandleEvent<Step1SuccessEvent>,
+        IHandleEvent<Step1FailEvent>,
+        IHandleEvent<Step2SuccessEvent>,
+        IHandleEvent<Step2FailEvent>
     {
-        public void Handle(TestSuccessEvent eEvent)
+        public void Handle(Step1SuccessEvent eEvent)
         {
             var a = 5;
         }
 
-        public void Handle(TestFailEvent eEvent)
+        public void Handle(Step1FailEvent eEvent)
+        {
+            var a = 5;
+        }
+
+        public void Handle(Step2SuccessEvent eEvent)
+        {
+            var a = 5;
+        }
+
+        public void Handle(Step2FailEvent eEvent)
         {
             var a = 5;
         }

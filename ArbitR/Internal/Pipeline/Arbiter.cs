@@ -47,38 +47,23 @@ namespace ArbitR.Internal.Pipeline
             }
         }
 
-        public T Begin<T>(ICommand cmd)
+        public T Begin<T>(IWorkflow<T> workflow)
         {
-            var workflow = _serviceFactory
-                .GetInstances(typeof(IWorkflow<,>).MakeGenericType(cmd.GetType(), typeof(T)))
-                .Single()
-                .Unbox<IWorkflow<ICommand, T>>();
-
-            try
+            workflow.Arbiter = this;
+            
+            foreach (Step<ICommand> step in workflow.Steps)
             {
-                Invoke(workflow.Start);
-                workflow.StartStep.SuccessFunc?.Invoke(workflow.Start);
-
-                foreach (Step<ICommand> step in workflow.Steps)
+                ICommand stepCmd = step.Command?.Invoke() ?? throw new InvalidOperationException($"Misconfigured step in workflow[{workflow.GetType()}]");
+                try
                 {
-                    // TODO :: Add better exceptions
-                    ICommand stepCmd = step.CommandFunc?.Invoke() ?? throw new InvalidOperationException("Misconfigured workflow step");
-                    try
-                    {
-                        Invoke(stepCmd);
-                        step.SuccessFunc?.Invoke(stepCmd);
-                    }
-                    catch (Exception)
-                    {
-                        step.FailureFunc?.Invoke(stepCmd);
-                        throw;
-                    }
+                    Invoke(stepCmd);
+                    if (step.Success is {}) Raise(step.Success.Invoke());
                 }
-            }
-            catch (Exception)
-            {
-                workflow.StartStep.FailureFunc?.Invoke(workflow.Start);
-                throw;
+                catch (Exception e)
+                {
+                    if (step.Failure is {}) Raise(step.Failure.Invoke());
+                    throw step.Throw?.Invoke(e) ?? e;
+                }
             }
 
             return workflow.GetResult();

@@ -2,36 +2,37 @@ using ArbitR.Pipeline.Workflows;
 
 namespace ArbitR.Tester
 {
-    public class TestWorkflow : Workflow<TestCommand, TestResult>
+    public class TestWorkflow : Workflow<TestResult>
     {
-        private string? _stage1;
-        private string? _stage2;
+        private Step1Command _step1 = default!;
+        private Step2Command _step2 = default!;
         
-        public TestWorkflow()
+        public TestWorkflow(int id, string name)
         {
-            ForStart()
-                .OnSuccess(cmd => new TestSuccessEvent(cmd.Name))
-                .OnFailure(cmd => new TestFailEvent($"{cmd.Name} failed!"));
+            AddStep(() =>
+                {
+                    _step1 = new Step1Command{Id = id, Name = name};
+                    return _step1;
+                })
+                .OnSuccess(() => new Step1SuccessEvent(_step1.Name))
+                .OnFailure(() => new Step1FailEvent($"{_step1.Name} failed!"));
 
             AddStep(() =>
                 {
-                    _stage1 = Start.Name;
-                    return new Test2Command
+                    _step2 = new Step2Command
                     {
-                        Name = Start.Name + " STAGE 2"
+                        Id = 2,
+                        Name = _step1.Name + " STAGE 2"
                     };
+                    return _step2;
                 })
-                .OnSuccess(cmd =>
-                {
-                    _stage2 = cmd.Name;
-                    return new TestSuccessEvent(cmd.Name);
-                })
-                .OnFailure(cmd => new TestFailEvent($"{cmd.Name} failed!"));
+                .OnSuccess(() => new Step2SuccessEvent(_step2.Name))
+                .OnFailure(() => new Step2FailEvent($"{_step2.Name} failed!"));
         }
         
         public override TestResult GetResult()
         {
-            return new TestResult(_stage1!, _stage2!);
+            return new TestResult(_step1.Name, _step2.Name);
         }
     }
 }
