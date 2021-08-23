@@ -47,21 +47,22 @@ namespace ArbitR.Internal.Pipeline
             }
         }
 
-        public T Begin<T>(IWorkflow<T> workflow)
+        public T Begin<T>(Workflow<T> workflow)
         {
             workflow.Arbiter = this;
             
             foreach (Step<ICommand> step in workflow.Steps)
             {
-                ICommand stepCmd = step.Command?.Invoke() ?? throw new InvalidOperationException($"Misconfigured step in workflow[{workflow.GetType()}]");
+                if (step.Command is null) throw new InvalidOperationException($"Misconfigured step in workflow[{workflow.GetType()}]");
+                ICommand stepCmd = step.Command.Invoke();
                 try
                 {
                     Invoke(stepCmd);
-                    if (step.Success is {}) Raise(step.Success.Invoke());
+                    if (step.Success is not null) Raise(step.Success.Invoke());
                 }
                 catch (Exception e)
                 {
-                    if (step.Failure is {}) Raise(step.Failure.Invoke());
+                    if (step.Failure is not null) Raise(step.Failure.Invoke());
                     throw step.Throw?.Invoke(e) ?? e;
                 }
             }

@@ -1,6 +1,6 @@
 using ArbitR.Pipeline.Workflows;
 
-namespace ArbitR.Tester
+namespace ArbitR.Tester.Workflows
 {
     public class TestWorkflow : Workflow<TestResult>
     {
@@ -27,7 +27,8 @@ namespace ArbitR.Tester
                     return _step2;
                 })
                 .OnSuccess(() => new Step2SuccessEvent(_step2.Name))
-                .OnFailure(() => new Step2FailEvent($"{_step2.Name} failed!"));
+                .OnFailure(() => new Step2FailEvent($"{_step2.Name} failed!"))
+                .OnFailureThrow(e => new TestException(e));
         }
         
         public override TestResult GetResult()

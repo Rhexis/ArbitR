@@ -14,4 +14,10 @@
       <ProjectReference Include="..\ArbitR\ArbitR.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Read" />
+      <Folder Include="ReadModel" />
+      <Folder Include="Write" />
+    </ItemGroup>
+
 </Project>

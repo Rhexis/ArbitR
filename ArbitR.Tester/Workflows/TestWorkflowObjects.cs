@@ -1,7 +1,8 @@
+using System;
 using ArbitR.Pipeline.ReadModel;
 using ArbitR.Pipeline.Write;
 
-namespace ArbitR.Tester
+namespace ArbitR.Tester.Workflows
 {
     public class Step1Command : ICommand
     {
@@ -64,6 +65,16 @@ namespace ArbitR.Tester
         {
             Stage1 = stage1;
             Stage2 = stage2;
+        }
+    }
+
+    public class TestException : Exception
+    {
+        private readonly Exception _e;
+
+        public TestException(Exception e)
+        {
+            _e = e;
         }
     }
 }

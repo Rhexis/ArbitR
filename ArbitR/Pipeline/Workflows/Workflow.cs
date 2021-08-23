@@ -4,17 +4,10 @@ using ArbitR.Pipeline.Write;
 
 namespace ArbitR.Pipeline.Workflows
 {
-    public interface IWorkflow<out TResult>
-    {
-        IArbiter Arbiter { get; set; }
-        List<Step<ICommand>> Steps { get; set; }
-        TResult GetResult();
-    }
-    
-    public abstract class Workflow<TResult> : IWorkflow<TResult>
+    public abstract class Workflow<TResult>
     {
         public IArbiter Arbiter { get; set; } = null!;
-        public List<Step<ICommand>> Steps { get; set; } = new();
+        public List<Step<ICommand>> Steps { get; } = new();
         
         protected Step<ICommand> AddStep(Func<ICommand> commandFunc)
         {
