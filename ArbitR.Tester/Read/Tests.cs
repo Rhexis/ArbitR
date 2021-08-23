@@ -1,8 +1,8 @@
 using System;
-using ArbitR.Tester.Write.Commands;
+using ArbitR.Tester.Read.Queries;
 using NUnit.Framework;
 
-namespace ArbitR.Tester.Write
+namespace ArbitR.Tester.Read
 {
     public class Tests : TestBase
     {
@@ -12,12 +12,12 @@ namespace ArbitR.Tester.Write
         }
 
         [Test]
-        public void Should_ThrowError_When_MultipleCommandHandlersRegisteredForOneCommand()
+        public void Should_ThrowError_When_MultipleQueryHandlersRegisteredForOneQuery()
         {
             Exception? exception = null;
             try
             {
-                Arbiter.Invoke(new BadCommand());
+                _ = Arbiter.Invoke(new BadQuery());
             }
             catch (Exception? e)
             {
