@@ -1,4 +1,8 @@
 using ArbitR.Pipeline.Workflows;
+using ArbitR.Tester.Workflows.Commands;
+using ArbitR.Tester.Workflows.Events;
+using ArbitR.Tester.Workflows.Exceptions;
+using ArbitR.Tester.Workflows.Results;
 
 namespace ArbitR.Tester.Workflows
 {

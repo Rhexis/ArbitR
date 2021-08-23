@@ -8,6 +8,8 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+      <PackageReference Include="NUnit" Version="3.13.2" />
     </ItemGroup>
 
     <ItemGroup>
@@ -17,7 +19,6 @@
     <ItemGroup>
       <Folder Include="Read" />
       <Folder Include="ReadModel" />
-      <Folder Include="Write" />
     </ItemGroup>
 
 </Project>

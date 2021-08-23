@@ -1,21 +1,7 @@
-using System;
 using ArbitR.Pipeline.ReadModel;
-using ArbitR.Pipeline.Write;
 
-namespace ArbitR.Tester.Workflows
+namespace ArbitR.Tester.Workflows.Events
 {
-    public class Step1Command : ICommand
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
-    
-    public class Step2Command : ICommand
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
-    
     public class Step1SuccessEvent : IEvent
     {
         public string Message { get; }
@@ -53,28 +39,6 @@ namespace ArbitR.Tester.Workflows
         public Step2FailEvent(string message)
         {
             Message = message;
-        }
-    }
-    
-    public class TestResult
-    {
-        public string Stage1 { get; }
-        public string Stage2 { get; }
-        
-        public TestResult(string stage1, string stage2)
-        {
-            Stage1 = stage1;
-            Stage2 = stage2;
-        }
-    }
-
-    public class TestException : Exception
-    {
-        private readonly Exception _e;
-
-        public TestException(Exception e)
-        {
-            _e = e;
         }
     }
 }
