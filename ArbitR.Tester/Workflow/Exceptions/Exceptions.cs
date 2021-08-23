@@ -1,6 +1,6 @@
 using System;
 
-namespace ArbitR.Tester.Workflows.Exceptions
+namespace ArbitR.Tester.Workflow.Exceptions
 {
     public class TestException : Exception
     {

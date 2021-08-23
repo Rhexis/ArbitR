@@ -1,9 +1,9 @@
 using ArbitR.Pipeline.ReadModel;
 using ArbitR.Pipeline.Write;
-using ArbitR.Tester.Workflows.Commands;
-using ArbitR.Tester.Workflows.Events;
+using ArbitR.Tester.Workflow.Commands;
+using ArbitR.Tester.Workflow.Events;
 
-namespace ArbitR.Tester.Workflows.Handlers
+namespace ArbitR.Tester.Workflow.Handlers
 {
     public class TestWorkflowWriteService : WriteService,
         IHandleCommand<Step1Command>,

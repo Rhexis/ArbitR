@@ -1,6 +1,6 @@
 using ArbitR.Pipeline.ReadModel;
 
-namespace ArbitR.Tester.Workflows.Events
+namespace ArbitR.Tester.Workflow.Events
 {
     public class Step1SuccessEvent : IEvent
     {

@@ -1,4 +1,4 @@
-namespace ArbitR.Tester.Workflows.Results
+namespace ArbitR.Tester.Workflow.Results
 {
     public class TestResult
     {

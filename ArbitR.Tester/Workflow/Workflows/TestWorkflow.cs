@@ -1,10 +1,10 @@
 using ArbitR.Pipeline.Workflows;
-using ArbitR.Tester.Workflows.Commands;
-using ArbitR.Tester.Workflows.Events;
-using ArbitR.Tester.Workflows.Exceptions;
-using ArbitR.Tester.Workflows.Results;
+using ArbitR.Tester.Workflow.Commands;
+using ArbitR.Tester.Workflow.Events;
+using ArbitR.Tester.Workflow.Exceptions;
+using ArbitR.Tester.Workflow.Results;
 
-namespace ArbitR.Tester.Workflows
+namespace ArbitR.Tester.Workflow.Workflows
 {
     public class TestWorkflow : Workflow<TestResult>
     {

@@ -53,7 +53,7 @@ namespace ArbitR.Internal.Pipeline
             
             foreach (Step<ICommand> step in workflow.Steps)
             {
-                if (step.Command is null) throw new InvalidOperationException($"Misconfigured step in workflow[{workflow.GetType()}]");
+                if (step.Command is null) throw new NullReferenceException($"Misconfigured step in workflow[{workflow.GetType()}], step had no command");
                 ICommand stepCmd = step.Command.Invoke();
                 try
                 {

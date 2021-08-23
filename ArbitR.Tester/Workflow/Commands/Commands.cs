@@ -1,6 +1,6 @@
 using ArbitR.Pipeline.Write;
 
-namespace ArbitR.Tester.Workflows.Commands
+namespace ArbitR.Tester.Workflow.Commands
 {
     public class Step1Command : ICommand
     {
