@@ -31,7 +31,7 @@ namespace ArbitR
                 {
                     typeof(IHandleCommand<>),
                     typeof(IHandleEvent<>),
-                    typeof(IHandleQuery<,>),
+                    typeof(IHandleQuery<,>)
                 }
             );
         }

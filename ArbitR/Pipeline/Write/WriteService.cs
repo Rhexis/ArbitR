@@ -8,7 +8,7 @@ namespace ArbitR.Pipeline.Write
     /// </summary>
     public abstract class WriteService : ServiceBase, IWriteService
     {
-        public void Handle(ICommand cmd)
+        public virtual void Handle(ICommand cmd)
         {
             Invoke(nameof(IHandleCommand<ICommand>.Handle), new object[] {cmd});
         }

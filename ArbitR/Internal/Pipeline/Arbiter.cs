@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ArbitR.Internal.Extensions;
 using ArbitR.Pipeline;
 using ArbitR.Pipeline.Read;
 using ArbitR.Pipeline.ReadModel;
+using ArbitR.Pipeline.Workflows;
 using ArbitR.Pipeline.Write;
 
 namespace ArbitR.Internal.Pipeline
@@ -43,6 +45,29 @@ namespace ArbitR.Internal.Pipeline
             {
                 handler.Unbox<ReadModelManager>().Handle(eEvent);
             }
+        }
+
+        public T Begin<T>(Workflow<T> workflow)
+        {
+            workflow.Arbiter = this;
+            
+            foreach (Step<ICommand> step in workflow.Steps)
+            {
+                if (step.Command is null) throw new NullReferenceException($"Misconfigured step in workflow[{workflow.GetType()}], step had no command");
+                ICommand stepCmd = step.Command.Invoke();
+                try
+                {
+                    Invoke(stepCmd);
+                    if (step.Success is not null) Raise(step.Success.Invoke());
+                }
+                catch (Exception e)
+                {
+                    if (step.Failure is not null) Raise(step.Failure.Invoke());
+                    throw step.Throw?.Invoke(e) ?? e;
+                }
+            }
+
+            return workflow.GetResult();
         }
     }
 }
