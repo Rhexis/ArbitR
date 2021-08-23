@@ -21,7 +21,7 @@ There are 4 types of services available in ArbitR.
 1. WriteService
 2. ReadService
 3. ReadModelManager
-4. Workflow
+4. Workflow (Beta)
 
 This architecture is based off my interpretation of the Microsoft docs found here: 
 
@@ -88,10 +88,11 @@ public class LoginAttemptReadModelManager : ReadModelManager,
 }
 ```
 
-### Workflow
+### Workflow (Beta)
 A workflow is meant to be an elegant way of describing a process for which Arbiter will then handle its orchestration.
 Use it when you need to chain together multiple commands, queries & events in a sequential order.
 When making a workflow, inherit `Workflow<T>` where T is the returned result upon success of the workflow.
+###### Sample
 ```c#
 public class RegisterUserWorkflow : Workflow<UserRegisteredResult>
 {
