@@ -1,7 +1,9 @@
+using ArbitR.Pipeline.Read;
 using ArbitR.Pipeline.ReadModel;
 using ArbitR.Pipeline.Write;
 using ArbitR.Tester.Workflow.Commands;
 using ArbitR.Tester.Workflow.Events;
+using ArbitR.Tester.Workflow.Queries;
 
 namespace ArbitR.Tester.Workflow.Handlers
 {
@@ -24,7 +26,8 @@ namespace ArbitR.Tester.Workflow.Handlers
         IHandleEvent<Step1SuccessEvent>,
         IHandleEvent<Step1FailEvent>,
         IHandleEvent<Step2SuccessEvent>,
-        IHandleEvent<Step2FailEvent>
+        IHandleEvent<Step2FailEvent>,
+        IHandleQuery<TestQuery, int>
     {
         public void Handle(Step1SuccessEvent eEvent)
         {
@@ -44,6 +47,12 @@ namespace ArbitR.Tester.Workflow.Handlers
         public void Handle(Step2FailEvent eEvent)
         {
             var a = 5;
+        }
+
+
+        public int Handle(TestQuery query)
+        {
+            return query.Id + 1;
         }
     }
 }

@@ -2,42 +2,42 @@ using ArbitR.Pipeline.Workflows;
 using ArbitR.Tester.Workflow.Commands;
 using ArbitR.Tester.Workflow.Events;
 using ArbitR.Tester.Workflow.Exceptions;
+using ArbitR.Tester.Workflow.Queries;
 using ArbitR.Tester.Workflow.Results;
 
 namespace ArbitR.Tester.Workflow.Workflows
 {
     public class TestWorkflow : Workflow<TestResult>
     {
-        private Step1Command _step1 = default!;
-        private Step2Command _step2 = default!;
+        private readonly int _id;
+        private readonly string _name;
+        private readonly string _step2Name;
         
         public TestWorkflow(int id, string name)
         {
-            AddStep(() =>
-                {
-                    _step1 = new Step1Command{Id = id, Name = name};
-                    return _step1;
-                })
-                .OnSuccess(() => new Step1SuccessEvent(_step1.Name))
-                .OnFailure(() => new Step1FailEvent($"{_step1.Name} failed!"));
+            _id = id;
+            _name = name;
+            _step2Name = _name + " STAGE 2";
+            
+            AddStep(() => new Step1Command{Id = id, Name = name})
+                .OnSuccess(() => new Step1SuccessEvent(_name))
+                .OnFailure(() => new Step1FailEvent($"{_name} failed!"));
 
-            AddStep(() =>
-                {
-                    _step2 = new Step2Command
-                    {
-                        Id = 2,
-                        Name = _step1.Name + " STAGE 2"
-                    };
-                    return _step2;
-                })
-                .OnSuccess(() => new Step2SuccessEvent(_step2.Name))
-                .OnFailure(() => new Step2FailEvent($"{_step2.Name} failed!"))
+            AddStep(() => Step2())
+                .OnSuccess(() => new Step2SuccessEvent(_step2Name))
+                .OnFailure(() => new Step2FailEvent($"{_step2Name} failed!"))
                 .OnFailureThrow(e => new TestException(e));
         }
-        
+
+        private Step2Command Step2()
+        {
+            var result = Arbiter.Invoke(new TestQuery(_id));
+            return new Step2Command { Id = result, Name = _step2Name };
+        }
+
         public override TestResult GetResult()
         {
-            return new TestResult(_step1.Name, _step2.Name);
+            return new TestResult(_name, _step2Name);
         }
     }
 }

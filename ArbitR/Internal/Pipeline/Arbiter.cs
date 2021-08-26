@@ -49,21 +49,19 @@ namespace ArbitR.Internal.Pipeline
 
         public T Begin<T>(Workflow<T> workflow)
         {
-            workflow.Arbiter = this;
+            workflow.Configure(this);
             
             foreach (Step<ICommand> step in workflow.Steps)
             {
-                if (step.Command is null) throw new NullReferenceException($"Misconfigured step in workflow[{workflow.GetType()}], step had no command");
-                ICommand stepCmd = step.Command.Invoke();
                 try
                 {
-                    Invoke(stepCmd);
-                    if (step.Success is not null) Raise(step.Success.Invoke());
+                    Invoke(step.Command);
+                    if (step.Success is not null) Raise(step.Success);
                 }
                 catch (Exception e)
                 {
-                    if (step.Failure is not null) Raise(step.Failure.Invoke());
-                    throw step.Throw?.Invoke(e) ?? e;
+                    if (step.Failure is not null) Raise(step.Failure);
+                    throw step.GetException(e);
                 }
             }
 
