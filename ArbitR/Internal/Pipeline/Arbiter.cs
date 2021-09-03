@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using ArbitR.Internal.Extensions;
@@ -50,21 +49,7 @@ namespace ArbitR.Internal.Pipeline
         public T Begin<T>(Workflow<T> workflow)
         {
             workflow.Configure(this);
-            
-            foreach (Step<ICommand> step in workflow.Steps)
-            {
-                try
-                {
-                    Invoke(step.Command);
-                    if (step.Success is not null) Raise(step.Success);
-                }
-                catch (Exception e)
-                {
-                    if (step.Failure is not null) Raise(step.Failure);
-                    throw step.GetException(e);
-                }
-            }
-
+            workflow.Run();
             return workflow.GetResult();
         }
     }

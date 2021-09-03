@@ -14,7 +14,7 @@ namespace ArbitR.Pipeline.Workflows
         internal IEvent? Success { get; private set; }
         internal IEvent? Failure { get; private set; }
 
-        public Step(Expression<Func<TCommand>> command)
+        internal Step(Expression<Func<TCommand>> command)
         {
             Definition = new StepDefinition<TCommand>(command);
         }

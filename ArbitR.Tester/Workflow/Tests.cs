@@ -1,3 +1,4 @@
+using ArbitR.Internal.Pipeline.Workflows;
 using ArbitR.Tester.Workflow.Results;
 using ArbitR.Tester.Workflow.Workflows;
 using NUnit.Framework;
@@ -20,6 +21,16 @@ namespace ArbitR.Tester.Workflow
             
             Assert.AreEqual(result.Stage1, testName);
             Assert.AreEqual(result.Stage2, testName + " STAGE 2");
+        }
+
+        [Test]
+        public void Test()
+        {
+            var workflow = new TestWorkflow(1, "");
+
+            WorkflowDefinition definition = workflow.GetDefinition();
+            
+            Assert.Pass();
         }
     }
 }
