@@ -103,7 +103,7 @@ public class RegisterUserWorkflow : Workflow<UserRegisteredResult>
         AddStep(() => new CreateUserCommand{Email = email, Password = password, Firstname = firstname, Surname = surname})
             .OnSuccess(() => new UserCreatedEvent(email));
 
-        AddStep(() => AuthUser(email))
+        AddStep(() => AuthenticateUser(email))
             .OnSuccess(() => new UserAuthenticatedEvent(firstname))
             .OnFailure(() => new UserFailedAuthenticationEvent($"{email} failed Authentication!"))
             .OnFailureThrow(e => new FailedAuthException(e));
