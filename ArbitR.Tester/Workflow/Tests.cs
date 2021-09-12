@@ -1,4 +1,4 @@
-using ArbitR.Internal.Pipeline.Workflows;
+using ArbitR.Pipeline.Definitions;
 using ArbitR.Tester.Workflow.Results;
 using ArbitR.Tester.Workflow.Workflows;
 using NUnit.Framework;

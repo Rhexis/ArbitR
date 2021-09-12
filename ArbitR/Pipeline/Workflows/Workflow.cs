@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using ArbitR.Internal.Pipeline.Workflows;
+using ArbitR.Pipeline.Definitions;
 using ArbitR.Pipeline.Write;
 
 namespace ArbitR.Pipeline.Workflows

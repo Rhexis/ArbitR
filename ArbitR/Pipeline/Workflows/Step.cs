@@ -1,6 +1,6 @@
 using System;
 using System.Linq.Expressions;
-using ArbitR.Internal.Pipeline.Workflows;
+using ArbitR.Pipeline.Definitions;
 using ArbitR.Pipeline.ReadModel;
 using ArbitR.Pipeline.Write;
 
