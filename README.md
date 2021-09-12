@@ -97,31 +97,26 @@ When making a workflow, inherit `Workflow<T>` where T is the returned result upo
 public class RegisterUserWorkflow : Workflow<UserRegisteredResult>
 {
     private User _user = default!;
-    private CreateUserCommand _step1 = default!;
-    private AuthenticateUserCommand _step2 = default!;
     
     public RegisterUserWorkflow(string email, string password, string firstname, string surname)
     {
-        AddStep(() =>
-            {
-                _step1 = new CreateUserCommand{Email = email, Password = password, Firstname = firstname, Surname = surname};
-                return _step1;
-            })
-            .OnSuccess(() => new UserCreatedEvent(_step1.email));
+        AddStep(() => new CreateUserCommand{Email = email, Password = password, Firstname = firstname, Surname = surname})
+            .OnSuccess(() => new UserCreatedEvent(email));
 
-        AddStep(() =>
-            {
-                _user = _arbiter.Invoke(new GetUserQuery(model.Login!));
-                _step2 = new AuthenticateUserCommand
-                {
-                    Email = _step1.Email,
-                    Password = _step1.Password
-                };
-                return _step2;
-            })
-            .OnSuccess(() => new UserAuthenticatedEvent(_step2.Name))
-            .OnFailure(() => new UserFailedAuthenticationEvent($"{_step2.Email} failed Authentication!"))
+        AddStep(() => AuthUser(email))
+            .OnSuccess(() => new UserAuthenticatedEvent(firstname))
+            .OnFailure(() => new UserFailedAuthenticationEvent($"{email} failed Authentication!"))
             .OnFailureThrow(e => new FailedAuthException(e));
+    }
+    
+    public ICommand AuthenticateUser(string email)
+    {
+        _user = _arbiter.Invoke(new GetUserQuery(email));
+        return new AuthenticateUserCommand
+        {
+            Email = _user.Email,
+            Password = _user.Password
+        };
     }
     
     public override UserRegisteredResult GetResult()
