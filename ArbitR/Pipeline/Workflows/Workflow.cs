@@ -21,11 +21,6 @@ namespace ArbitR.Pipeline.Workflows
         internal void Configure(IArbiter arbiter)
         {
             Arbiter = arbiter;
-
-            foreach (Step<ICommand> step in Steps)
-            {
-                step.Configure();
-            }
         }
 
         internal void Run()

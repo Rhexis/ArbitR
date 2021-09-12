@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using System.Linq;
 using ArbitR.Internal.Extensions;
+using ArbitR.Internal.Pipeline.Background;
 using ArbitR.Pipeline;
 using ArbitR.Pipeline.Read;
 using ArbitR.Pipeline.ReadModel;
@@ -12,10 +12,12 @@ namespace ArbitR.Internal.Pipeline
     internal sealed class Arbiter : IArbiter
     {
         private readonly ServiceFactory _serviceFactory;
+        private readonly EventService _eventService;
 
-        public Arbiter(ServiceFactory serviceFactory)
+        public Arbiter(ServiceFactory serviceFactory, EventService eventService)
         {
             _serviceFactory = serviceFactory;
+            _eventService = eventService;
         }
 
         public void Invoke(ICommand cmd)
@@ -38,12 +40,7 @@ namespace ArbitR.Internal.Pipeline
         
         public void Raise(IEvent eEvent)
         {
-            IEnumerable<object> handlers = _serviceFactory
-                .GetInstances(typeof(IHandleEvent<>).MakeGenericType(eEvent.GetType()));
-            foreach (var handler in handlers)
-            {
-                handler.Unbox<ReadModelManager>().Handle(eEvent);
-            }
+            _eventService.Enqueue(eEvent);
         }
 
         public T Begin<T>(Workflow<T> workflow)

@@ -10,20 +10,13 @@ namespace ArbitR.Pipeline.Workflows
     {
         // ReSharper disable once MemberCanBePrivate.Global
         internal StepDefinition<TCommand> Definition { get; }
-        internal TCommand Command { get; private set; } = default!;
-        internal IEvent? Success { get; private set; }
-        internal IEvent? Failure { get; private set; }
+        internal TCommand Command => Definition.CommandExpr.Compile().Invoke();
+        internal IEvent? Success => Definition.SuccessExpr?.Compile().Invoke();
+        internal IEvent? Failure => Definition.FailureExpr?.Compile().Invoke();
 
         internal Step(Expression<Func<TCommand>> command)
         {
             Definition = new StepDefinition<TCommand>(command);
-        }
-        
-        internal void Configure()
-        {
-            Command = Definition.CommandExpr.Compile().Invoke() ?? throw new NullReferenceException("Misconfigured step in workflow, had no command");
-            Success = Definition.SuccessExpr?.Compile().Invoke();
-            Failure = Definition.FailureExpr?.Compile().Invoke();
         }
         
         internal Exception GetException(Exception exception)

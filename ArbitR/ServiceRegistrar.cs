@@ -5,6 +5,7 @@ using System.Reflection;
 using ArbitR.Internal;
 using ArbitR.Internal.Extensions;
 using ArbitR.Internal.Pipeline;
+using ArbitR.Internal.Pipeline.Background;
 using ArbitR.Pipeline;
 using ArbitR.Pipeline.Read;
 using ArbitR.Pipeline.ReadModel;
@@ -22,7 +23,17 @@ namespace ArbitR
         /// <param name="assemblies">The Assemblies that contains the read/write services & read model managers.</param>
         public static void AddArbitR(this IServiceCollection services, params Assembly[] assemblies)
         {
-            services.AddTransient<IArbiter, Arbiter>();
+            services.AddArbitR(new Config(), assemblies);
+        }
+
+        /// <summary>
+        /// Sets up and configures ArbitR.
+        /// </summary>
+        /// <param name="services">Service collection container.</param>
+        /// <param name="cfg"></param>
+        /// <param name="assemblies">The Assemblies that contains the read/write services & read model managers.</param>
+        public static void AddArbitR(this IServiceCollection services, Config cfg, params Assembly[] assemblies)
+        {
             Register
             (
                 services,
@@ -32,13 +43,24 @@ namespace ArbitR
                     typeof(IHandleCommand<>),
                     typeof(IHandleEvent<>),
                     typeof(IHandleQuery<,>)
-                }
+                },
+                cfg
             );
         }
-        
-        private static void Register(IServiceCollection services, Assembly[] assemblies, IEnumerable<Type> handlers)
+
+        private static void Register
+        (
+            IServiceCollection services,
+            Assembly[] assemblies,
+            IEnumerable<Type> handlers,
+            Config cfg
+        )
         {
             services.AddTransient<ServiceFactory>(p => p.GetService!);
+            services.AddSingleton<EventService>();
+            services.AddHostedService<HostedQueueService>();
+            services.AddSingleton<IBackgroundEventQueue>(_ => new DefaultBackgroundEventQueue(cfg.QueueConfiguration));
+            services.AddTransient<IArbiter, Arbiter>();
             
             foreach (var handler in handlers)
             {
