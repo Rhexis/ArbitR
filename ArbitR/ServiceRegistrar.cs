@@ -7,6 +7,7 @@ using ArbitR.Internal.Extensions;
 using ArbitR.Internal.Pipeline;
 using ArbitR.Internal.Pipeline.Background;
 using ArbitR.Pipeline;
+using ArbitR.Pipeline.Configuration;
 using ArbitR.Pipeline.Read;
 using ArbitR.Pipeline.ReadModel;
 using ArbitR.Pipeline.Write;
