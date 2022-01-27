@@ -12,9 +12,9 @@ namespace ArbitR.Internal.Pipeline
     internal sealed class Arbiter : IArbiter
     {
         private readonly ServiceFactory _serviceFactory;
-        private readonly EventService _eventService;
+        private readonly IEventService _eventService;
 
-        public Arbiter(ServiceFactory serviceFactory, EventService eventService)
+        public Arbiter(ServiceFactory serviceFactory, IEventService eventService)
         {
             _serviceFactory = serviceFactory;
             _eventService = eventService;
@@ -40,7 +40,7 @@ namespace ArbitR.Internal.Pipeline
         
         public void Raise(IEvent eEvent)
         {
-            _eventService.Enqueue(eEvent);
+            _eventService.Handle(eEvent);
         }
 
         public T Begin<T>(Workflow<T> workflow)

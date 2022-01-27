@@ -6,11 +6,11 @@ using ArbitR.Pipeline.ReadModel;
 
 namespace ArbitR.Internal.Pipeline.Background
 {
-    internal class DefaultBackgroundEventQueue : IBackgroundEventQueue
+    internal sealed class ChannelBackgroundEventQueue : IBackgroundEventQueue
     {
         private readonly Channel<IEvent> _queue;
 
-        public DefaultBackgroundEventQueue(int capacity)
+        public ChannelBackgroundEventQueue(int capacity)
         {
             BoundedChannelOptions options = new(capacity)
             {

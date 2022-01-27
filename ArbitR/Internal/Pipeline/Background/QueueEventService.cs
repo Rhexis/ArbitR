@@ -3,16 +3,16 @@ using ArbitR.Pipeline.ReadModel;
 
 namespace ArbitR.Internal.Pipeline.Background
 {
-    internal sealed class EventService
+    internal sealed class QueueEventService : IEventService
     {
         private readonly IBackgroundEventQueue _eventQueue;
 
-        public EventService(IBackgroundEventQueue eventQueue)
+        public QueueEventService(IBackgroundEventQueue eventQueue)
         {
             _eventQueue = eventQueue;
         }
 
-        public void Enqueue(IEvent eEvent)
+        public void Handle(IEvent eEvent)
         {
             Task.Run(async () => await _eventQueue.QueueBackgroundWorkItemAsync(eEvent));
         }

@@ -58,10 +58,19 @@ namespace ArbitR
         )
         {
             services.AddTransient<ServiceFactory>(p => p.GetService!);
-            services.AddSingleton<EventService>();
-            services.AddHostedService<HostedQueueService>();
-            services.AddSingleton<IBackgroundEventQueue>(_ => new DefaultBackgroundEventQueue(cfg.QueueConfiguration));
             services.AddTransient<IArbiter, Arbiter>();
+
+            switch (cfg.QueueType)
+            {
+                case QueueType.Channel:
+                    services.AddSingleton<IBackgroundEventQueue>(_ => new ChannelBackgroundEventQueue(cfg.QueueCapacity));
+                    services.AddSingleton<IEventService, QueueEventService>();
+                    services.AddHostedService<HostedQueueService>();
+                    break;
+                case QueueType.Synchronous:
+                    services.AddSingleton<IEventService, SynchronousEventService>();
+                    break;
+            }
             
             foreach (var handler in handlers)
             {

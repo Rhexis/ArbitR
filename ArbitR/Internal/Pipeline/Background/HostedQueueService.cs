@@ -4,18 +4,19 @@ using System.Threading;
 using System.Threading.Tasks;
 using ArbitR.Internal.Extensions;
 using ArbitR.Pipeline.ReadModel;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace ArbitR.Internal.Pipeline.Background
 {
     internal sealed class HostedQueueService : BackgroundService
     {
-        private readonly ServiceFactory _serviceFactory;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
         private readonly IBackgroundEventQueue _eventQueue;
 
-        public HostedQueueService(ServiceFactory serviceFactory, IBackgroundEventQueue eventQueue)
+        public HostedQueueService(IServiceScopeFactory serviceScopeFactory, IBackgroundEventQueue eventQueue)
         {
-            _serviceFactory = serviceFactory;
+            _serviceScopeFactory = serviceScopeFactory;
             _eventQueue = eventQueue;
         }
 
@@ -30,9 +31,12 @@ namespace ArbitR.Internal.Pipeline.Background
             {
                 try
                 {
+                    using IServiceScope scope = _serviceScopeFactory.CreateScope();
+                    ServiceFactory serviceFactory = scope.ServiceProvider.GetService!;
+                        
                     IEvent eEvent = await _eventQueue.DequeueAsync(stoppingToken);
-
-                    IEnumerable<object> handlers = _serviceFactory
+                    
+                    IEnumerable<object> handlers = serviceFactory
                         .GetInstances(typeof(IHandleEvent<>).MakeGenericType(eEvent.GetType()));
                     foreach (var handler in handlers)
                     {
