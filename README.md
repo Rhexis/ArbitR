@@ -1,3 +1,5 @@
+# This is an experiment. Don't use it in a production system.
+
 # ArbitR
 A simple light weight CQRS implementation built in .NET
 
